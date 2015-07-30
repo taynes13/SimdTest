@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimdTest", "SimdTest\SimdTest.csproj", "{6BACE353-0066-4AF6-A80E-8BF0FD0B6E1D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E6DF1858-2A8D-4F08-86F8-6319F85C5D19} = {E6DF1858-2A8D-4F08-86F8-6319F85C5D19}
+		{CD478F71-09F9-416E-AA4E-76267B7CF69F} = {CD478F71-09F9-416E-AA4E-76267B7CF69F}
+		{AFE5DBDB-3CE4-4C60-927D-7EDF17829F31} = {AFE5DBDB-3CE4-4C60-927D-7EDF17829F31}
+		{417FC0FA-20C1-427B-A300-5B211288409B} = {417FC0FA-20C1-427B-A300-5B211288409B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimdTest.Net_4_6_x64", "SimdTest.Net_4_6_x64\SimdTest.Net_4_6_x64.csproj", "{AFE5DBDB-3CE4-4C60-927D-7EDF17829F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimdTest.Net_4_6_x86", "SimdTest.Net_4_6_x86\SimdTest.Net_4_6_x86.csproj", "{417FC0FA-20C1-427B-A300-5B211288409B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimdTest.Net_4_5_2_x86", "SimdTest.Net_4_5_2_x86\SimdTest.Net_4_5_2_x86.csproj", "{E6DF1858-2A8D-4F08-86F8-6319F85C5D19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimdTest.Net_4_5_2_x64", "SimdTest.Net_4_5_2_x64\SimdTest.Net_4_5_2_x64.csproj", "{CD478F71-09F9-416E-AA4E-76267B7CF69F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BACE353-0066-4AF6-A80E-8BF0FD0B6E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BACE353-0066-4AF6-A80E-8BF0FD0B6E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BACE353-0066-4AF6-A80E-8BF0FD0B6E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BACE353-0066-4AF6-A80E-8BF0FD0B6E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE5DBDB-3CE4-4C60-927D-7EDF17829F31}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{AFE5DBDB-3CE4-4C60-927D-7EDF17829F31}.Debug|Any CPU.Build.0 = Debug|x64
+		{AFE5DBDB-3CE4-4C60-927D-7EDF17829F31}.Release|Any CPU.ActiveCfg = Release|x64
+		{AFE5DBDB-3CE4-4C60-927D-7EDF17829F31}.Release|Any CPU.Build.0 = Release|x64
+		{417FC0FA-20C1-427B-A300-5B211288409B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{417FC0FA-20C1-427B-A300-5B211288409B}.Debug|Any CPU.Build.0 = Debug|x86
+		{417FC0FA-20C1-427B-A300-5B211288409B}.Release|Any CPU.ActiveCfg = Release|x86
+		{417FC0FA-20C1-427B-A300-5B211288409B}.Release|Any CPU.Build.0 = Release|x86
+		{E6DF1858-2A8D-4F08-86F8-6319F85C5D19}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E6DF1858-2A8D-4F08-86F8-6319F85C5D19}.Debug|Any CPU.Build.0 = Debug|x86
+		{E6DF1858-2A8D-4F08-86F8-6319F85C5D19}.Release|Any CPU.ActiveCfg = Release|x86
+		{E6DF1858-2A8D-4F08-86F8-6319F85C5D19}.Release|Any CPU.Build.0 = Release|x86
+		{CD478F71-09F9-416E-AA4E-76267B7CF69F}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{CD478F71-09F9-416E-AA4E-76267B7CF69F}.Debug|Any CPU.Build.0 = Debug|x64
+		{CD478F71-09F9-416E-AA4E-76267B7CF69F}.Release|Any CPU.ActiveCfg = Release|x64
+		{CD478F71-09F9-416E-AA4E-76267B7CF69F}.Release|Any CPU.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
