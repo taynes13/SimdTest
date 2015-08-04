@@ -34,11 +34,11 @@ namespace SimdTest.Worker
 #endif
             titlePrefix += (Environment.Is64BitProcess ? "x64" : "x86");
 
-            Run(titlePrefix + "\tNaive", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductNaive);
-            Run(titlePrefix + "\tVector2", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVector2);
-            Run(titlePrefix + "\tVector4", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVector4);
+            Run(titlePrefix + "\tScalar\t1", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductScalar);
+            Run(titlePrefix + "\tVector2\t2", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVector2);
+            Run(titlePrefix + "\tVector4\t4", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVector4);
 #if !NET_4_5_2
-            Run(titlePrefix + "\tVectorT", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVectorT);
+            Run(titlePrefix + "\tVectorT\t" + Vector<float>.Count, Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVectorT);
 #endif
         }
 
@@ -79,7 +79,7 @@ namespace SimdTest.Worker
             return stopwatch.Elapsed;
         }
 
-        private static float DotProductNaive(float[] vector1, float[] vector2)
+        private static float DotProductScalar(float[] vector1, float[] vector2)
         {
             var result = 0f;
 

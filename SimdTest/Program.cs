@@ -12,15 +12,15 @@ namespace SimdTest
     {
         static void Main(string[] args)
         {
-            Console.Write(".NET Version\tPlatform\tDot Product Method\t");
+            Console.Write(".NET Version\tPlatform\tMethod\tVector Size\t");
             for (int i = 1; i <= Constants.TestRunCount; i++)
                 Console.Write("Run {0}\t", i);
             Console.WriteLine("Avg.");
 
-            RunTestProcess("Net_4.5.2\\SimdTest.Net_4_5_2_x86.exe");
-            RunTestProcess("Net_4.5.2\\SimdTest.Net_4_5_2_x64.exe");
-            RunTestProcess("Net_4.6\\SimdTest.Net_4_6_x86.exe");
             RunTestProcess("Net_4.6\\SimdTest.Net_4_6_x64.exe");
+            RunTestProcess("Net_4.6\\SimdTest.Net_4_6_x86.exe");
+            RunTestProcess("Net_4.5.2\\SimdTest.Net_4_5_2_x64.exe");
+            RunTestProcess("Net_4.5.2\\SimdTest.Net_4_5_2_x86.exe");
 
             Console.ReadLine();
         }
