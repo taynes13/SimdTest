@@ -14,7 +14,7 @@ namespace SimdTest.Worker
     {
         public void RunTestFixture()
         {
-            var vectorLength = 100004; // 04 in the end to ensure length is divisible by 4
+            var vectorLength = 100032; // Length of the Vector which is divisible by 2, 3, 4, 8 and 16 so there is no problem to use any possible Vector SIMD Instruction size
             var multiplicationsCount = 100000;
 
             var rand = new Random();
@@ -36,6 +36,7 @@ namespace SimdTest.Worker
 
             Run(titlePrefix + "\tScalar\t1", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductScalar);
             Run(titlePrefix + "\tVector2\t2", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVector2);
+            Run(titlePrefix + "\tVector3\t3", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVector3);
             Run(titlePrefix + "\tVector4\t4", Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVector4);
 #if !NET_4_5_2
             Run(titlePrefix + "\tVectorT\t" + Vector<float>.Count, Constants.TestRunCount, multiplicationsCount, vector1, vector2, DotProductVectorT);
@@ -104,6 +105,24 @@ namespace SimdTest.Worker
                 vectorChunk2 = new Vector2(vector2[i], vector2[i + 1]);
 
                 result += Vector2.Dot(vectorChunk1, vectorChunk2);
+            }
+
+            return result;
+        }
+
+        private static float DotProductVector3(float[] vector1, float[] vector2)
+        {
+            var chunkSize = 3;
+            var result = 0f;
+
+            Vector3 vectorChunk1;
+            Vector3 vectorChunk2;
+            for (var i = 0; i < vector1.Length; i += chunkSize)
+            {
+                vectorChunk1 = new Vector3(vector1[i], vector1[i + 1], vector1[i + 2]);
+                vectorChunk2 = new Vector3(vector2[i], vector2[i + 1], vector2[i + 2]);
+
+                result += Vector3.Dot(vectorChunk1, vectorChunk2);
             }
 
             return result;
